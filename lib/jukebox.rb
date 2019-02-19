@@ -28,7 +28,7 @@ end
 def play(songs)
   puts "Please enter a song name or number:"
   song = gets.chomp
-  if song.numeric?
+  if song.is_a(Numeric)
     song_idx = song - 1
     title = songs[song_idx]
   else
