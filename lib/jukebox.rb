@@ -33,6 +33,7 @@ def play(songs)
     song = song.to_i
     song_idx = song - 1
     title = songs[song_idx]
+    puts "Playing #{title}"
   else
     if songs.include?(song)
       puts "Playing #{song}"
