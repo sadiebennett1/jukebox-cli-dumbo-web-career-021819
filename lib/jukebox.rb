@@ -28,16 +28,15 @@ end
 def play(songs)
   puts "Please enter a song name or number:"
   song = gets.chomp
-  if song.class == String
+  if song.to_i == true
+    song_idx = song - 1
+    title = songs[song_idx]
+  else
     if songs.include?(song)
       puts "Playing #{song}"
     else
       puts "Invalid input, please try again."
     end
-  else
-    song_idx = song - 1
-    title = songs[song_idx]
-    puts "Playing #{title}"
   end
 end
 
